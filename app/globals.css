@@ -1,8 +1,9 @@
 @import "tailwindcss";
 :root {
-    --custom-blue-900: #343434;
+    --custom-blue-900: #14183E;
+    --custom-gray-800: #323232;
 }
 
 body {
-    font-family: var(--font-poppins), var(--font-poppins);
+    font-family: var(--font-poppins), var(--font-volkhov);
 }
