@@ -1,5 +1,6 @@
 @import "tailwindcss";
 :root {
+    --custom-blue-700: #006380;
     --custom-blue-900: #14183E;
     --custom-gray-800: #323232;
 }
