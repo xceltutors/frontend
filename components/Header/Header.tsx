@@ -9,7 +9,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-[92%] mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem] bg-[url('/assets/images/background-header.svg')] 
+    <header className="w-[92%] mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
       bg-cover bg-center rounded-md bg-gray-100 relative">
 
       <div className="flex items-center">
@@ -24,7 +24,9 @@ export function Header() {
           <a
             key={index}
             href={item.link}
-            className="relative text-[var(--custom-gray-800)] font-semibold text-base hover:text-orange-500 after:content-[''] after:absolute after:h-[2px] after:w-10 after:bg-[var(--custom-blue-700)] after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:rounded-md after:opacity-0 hover:after:opacity-100 transition-all duration-300"
+            className="relative text-[var(--custom-gray-800)] font-semibold text-base hover:text-orange-500 after:content-[''] 
+            after:absolute after:h-[2px] after:w-10 after:bg-[var(--custom-blue-700)] after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 
+            after:rounded-md after:opacity-0 hover:after:opacity-100 transition-all duration-300"
           >
             {item.name}
           </a>
