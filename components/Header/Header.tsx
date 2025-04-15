@@ -49,7 +49,8 @@ export function Header() {
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      <div className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md shadow-md transition-all duration-300 ease-in-out ${menuOpen ? 'max-h-96 py-6 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md shadow-md transition-all duration-300 ease-in-out 
+        ${menuOpen ? 'max-h-96 py-6 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <nav className="flex flex-col items-center gap-4 font-[var(--font-poppins)]">
           {navItems.map((item, index) => (
             <a
