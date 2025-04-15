@@ -1,7 +1,7 @@
-import { Header } from "@/components/Header/Header";
+import LandingPage from "./(landingPage)/page";
 
 export default function Home() {
   return (
-    <Header />
+    <LandingPage />
   )
 }
