@@ -24,9 +24,8 @@ export function Header() {
         ))}
       </nav>
 
-
       <div className="flex items-center gap-4">
-        <button className="px-6 py-2 cursor-pointer border border-[var(--custom-blue-700)] text-[var(--custom-blue-700)] rounded-md font-medium">
+        <button className="px-6 py-1.5 cursor-pointer border-2 border-[var(--custom-blue-700)] text-[var(--custom-blue-700)] rounded-md font-medium">
           Login
         </button>
         <button className="px-6 py-2 cursor-pointer bg-[var(--custom-blue-700)] text-white rounded-md font-medium hover:bg-[var(--custom-blue-700)]">
