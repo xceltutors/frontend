@@ -1,13 +1,16 @@
-import { Header } from "@/components/Header/Header";
+import DefaultLayout from "@/components/Layout/DefaultLayout";
 import { Hero } from "@/components/Hero/Hero";
+import { TextInformation } from "@/components/TextInformation/TextInformation";
+import { CardLandingPage } from "@/components/Card/CardLandingPage";
 
 export default function LandingPage() {
   return (
-    <div className="w-full min-h-screen p-[2.8rem] flex flex-col items-center">
-      <Header />
-      <main className="w-full flex flex-col">
-        <Hero/>
-      </main>
-    </div>
+    <DefaultLayout>
+      <Hero />
+      <section className="w-full md:h-[33.75rem] flex flex-col md:flex-row justify-between gap-8 px-[3rem] py-[1rem]">
+        <TextInformation />
+        <CardLandingPage />
+      </section>
+    </DefaultLayout>
   );
 }

@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-[92%] max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-evenly px-4 py-8 gap-8 lg:gap-0 h-auto lg:h-[35rem]">
-      <div className="w-full lg:w-[40%] flex flex-col items-center justify-center space-y-4 order-2 lg:order-1 text-center lg:text-left">
+    <section className="w-[92%] max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-[3rem] py-[1rem] gap-8 lg:gap-0 h-auto lg:h-[35rem]">
+      <div className="w-full lg:w-[42%] flex flex-col items-center justify-center space-y-4 order-2 lg:order-1 text-center lg:text-left">
         <h2 className="font-(family-name:--font-volkhov) text-[var(--custom-blue-900)] font-bold text-[2.5rem] text-center sm:text-4xl lg:text-[3rem] leading-tight">
           XCel in your studies with Expert Tutors
         </h2>
