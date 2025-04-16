@@ -2,6 +2,7 @@ import DefaultLayout from "@/components/Layout/DefaultLayout";
 import { Hero } from "@/components/Hero/Hero";
 import { TextInformation } from "@/components/TextInformation/TextInformation";
 import { CardLandingPage } from "@/components/Card/CardLandingPage";
+import TestimonialSlideshow from "@/components/TestimonialSlideshow/TestimonialSlideshow";
 
 export default function LandingPage() {
   return (
@@ -11,6 +12,7 @@ export default function LandingPage() {
         <TextInformation />
         <CardLandingPage />
       </section>
+      <TestimonialSlideshow/>
     </DefaultLayout>
   );
 }
