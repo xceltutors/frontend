@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
     --custom-blue-50: #5E6282;
     --custom-blue-700: #006380;
@@ -7,6 +6,7 @@
     --custom-gray-40: #D9D9D9;
     --custom-gray-50: #5E6282;
     --custom-gray-100: #84829A;
+    --custom-gray-200: #FCFCFC;
     --custom-gray-800: #323232;
     --custom-orange-500: #F15A2B;
     --custom-yellow-500: #F0BB1F;

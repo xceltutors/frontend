@@ -4,7 +4,7 @@ import { Info } from "lucide-react";
 
 export function CardLandingPage() {
   return (
-    <div className="w-[95%] h-[27rem] sm:h-[30rem] md:w-[23.1rem] md:h-[25rem] flex flex-col p-5 rounded-[1.625rem] space-y-3 bg-white relative mt-[6.2%] shadow-custom">
+    <div className="w-[45%] h-[27rem] sm:h-[30rem] md:w-[23.1rem] md:h-[25rem] flex flex-col p-5 rounded-[1.625rem] space-y-3 bg-white relative mt-[6.2%] shadow-custom">
       <Image
         width={320.13}
         height={161}

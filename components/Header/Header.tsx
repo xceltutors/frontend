@@ -9,7 +9,7 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-[92%] mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
+    <header className="w-full mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
       bg-cover bg-center rounded-md bg-gray-100 relative">
 
       <div className="flex items-center">

@@ -5,9 +5,9 @@ import { Header } from "@/components/Header/Header";
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center">
+    <div className="w-full min-h-screen flex flex-col items-center px-[7%] py-[3rem] space-y-[4rem] bg-[var(--custom-gray-200)]">
       <Header />
-      <main className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">{children}</main>
+      <main className="w-full flex flex-col space-y-[4rem]">{children}</main>
     </div>
   );
 }
