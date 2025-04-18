@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xl md:text-2xl font-bold mb-4">Contact us</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 lg:mt-2">Contact us</h2>
             <ul className="space-y-3 text-sm md:text-base">
               <li className="flex items-center gap-2">
                 <Mail />
@@ -105,7 +105,7 @@ export default function Footer() {
                   height={50}
                   src="/images/logo-footer.svg"
                   alt="Logo Xceltutors"
-                  className="object-cover mb-[-10px]"
+                  className="object-cover mb-[-12px]"
                 />
                 <span className="text-4xl font-bold font-(family-name:--font-volkhov)">
                   celtutors
