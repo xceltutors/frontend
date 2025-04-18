@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -9,12 +9,19 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
-      bg-cover bg-center rounded-md bg-gray-100 relative">
-
+    <header
+      className="w-full mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
+      bg-cover bg-center rounded-md bg-gray-100 relative"
+    >
       <div className="flex items-center">
-        <Image width={60} height={60} src="/logo.svg" alt="Logo Xceltutors" className="w-[40] md:w-[60] h-[40] md:h-[60]" />
-        <span className="font-(family-name:--font-volkhov) text-[1.5rem] md:text-[2.25rem] text-[var(--custom-blue-900)] font-bold">
+        <Image
+          width={60}
+          height={60}
+          src="/logo.svg"
+          alt="Logo Xceltutors"
+          className="w-[40] md:w-[60] h-[40] md:h-[60]"
+        />
+        <span className="font-(family-name:--font-volkhov) text-2xl md:text-4xl text-[var(--custom-blue-900)] font-bold">
           celtutors
         </span>
       </div>
@@ -49,8 +56,14 @@ export function Header() {
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      <div className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md shadow-md transition-all duration-300 ease-in-out 
-        ${menuOpen ? 'max-h-96 py-6 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+      <div
+        className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md shadow-md transition-all duration-300 ease-in-out 
+        ${
+          menuOpen
+            ? "max-h-96 py-6 opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
         <nav className="flex flex-col items-center gap-4 font-[var(--font-poppins)]">
           {navItems.map((item, index) => (
             <a
