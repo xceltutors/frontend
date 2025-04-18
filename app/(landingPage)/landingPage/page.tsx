@@ -13,13 +13,16 @@ export default function LandingPage() {
   return (
     <DefaultLayout>
       <Hero />
-      <section className="w-full md:h-[33.75rem] flex flex-col md:flex-row gap-8 px-[3rem]">
+      <section
+        className="w-full h-auto lg:h-[33.75rem] flex flex-col md:flex-row gap-8 py-4 sm:py-6
+       md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+      >
         <TextInformation />
         <CardLandingPage />
       </section>
       <TestimonialSlideshow />
       <Tutors />
-      <section className="w-full h-auto px-[2rem] md:px-[10rem] py-[1.2rem] md:py-[3rem]">
+      <section className="w-full h-auto py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
         <div className="flex flex-col space-y-3 max-w-7xl mx-auto">
           <span className="text-base md:text-xl text-[var(--custom-blue-50)] font-semibold">
             Popular Subjects

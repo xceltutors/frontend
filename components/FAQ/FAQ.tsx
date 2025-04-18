@@ -7,7 +7,7 @@ import { faqs } from "./data";
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
-    <section className="w-full h-auto flex-col px-[2rem] md:px-[10rem] py-[1.2rem] md:py-[3rem]">
+    <section className="w-full h-auto flex-col py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
       <div className="flex flex-col space-y-3">
         <span className="text-base md:text-xl text-[var(--custom-blue-50)] font-semibold">
           Frequently Asked Questions

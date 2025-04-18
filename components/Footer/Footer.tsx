@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 justify-center items-center font-(family-name:--font-inter)">
           <div>
-            <h2 className="text-xl md:text-2xl font-bold mb-4">
+            <h2 className="text-base md:text-xl font-bold mb-4">
               Company information
             </h2>
             <ul className="space-y-2 text-sm md:text-base">
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xl md:text-2xl font-bold mb-4">
+            <h2 className="text-base md:text-xl font-bold mb-4">
               Popular requests
             </h2>
             <ul className="space-y-2 text-sm md:text-base">
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xl md:text-2xl font-bold mb-4 lg:mt-2">Contact us</h2>
+            <h2 className="text-base md:text-xl font-bold mb-4 lg:mt-2">Contact us</h2>
             <ul className="space-y-3 text-sm md:text-base">
               <li className="flex items-center gap-2">
                 <Mail />
