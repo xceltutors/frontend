@@ -82,7 +82,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-              <MessageCircle />
+                <MessageCircle />
                 <a
                   href="https://wa.me/442037736020"
                   className="hover:underline"

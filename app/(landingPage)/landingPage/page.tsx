@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero/Hero";
 import { TextInformation } from "@/components/TextInformation/TextInformation";
 import { CardLandingPage } from "@/components/Card/CardLandingPage";
 import TestimonialSlideshow from "@/components/TestimonialSlideshow/TestimonialSlideshow";
+import { FAQ } from "@/components/FAQ/FAQ";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
         <CardLandingPage />
       </section>
       <TestimonialSlideshow />
+      <FAQ/>
     </DefaultLayout>
   );
 }
