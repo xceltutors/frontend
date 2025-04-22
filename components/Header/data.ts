@@ -13,7 +13,7 @@ export const navItems = [
   },
   {
     name: "Prices",
-    link: "#",
+    link: "/prices",
   },
   {
     name: "About us",
