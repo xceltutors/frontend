@@ -28,7 +28,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden min-[1550px]:flex gap-8 font-[var(--font-poppins)]">
+        <nav className="hidden min-[1480px]:flex gap-8 font-[var(--font-poppins)]">
           {navItems.map((item, index) => (
             <a
               key={index}
@@ -43,7 +43,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden min-[1550px]:flex items-center gap-4">
+        <div className="hidden min-[1480px]:flex items-center gap-4">
           <button className="px-6 py-1.5 border-2 border-[var(--custom-blue-700)] text-[var(--custom-blue-700)] rounded-md font-medium">
             Login
           </button>
@@ -53,15 +53,15 @@ export function Header() {
         </div>
 
         <button
-          className="max-[1550px]:flex hidden z-30 text-[var(--custom-blue-900)]"
+          className="hidden max-[1480px]:flex  z-30 text-[var(--custom-blue-900)]"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
         <div
-          className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md 
-            shadow-md transition-all duration-300 ease-in-out 
+          className={`min-[1480px]:hidden absolute top-full left-0 w-full bg-white rounded-b-md 
+            shadow-md transition-all duration-300 ease-in-out z-40
         ${menuOpen
               ? "max-h-96 py-6 opacity-100"
               : "max-h-0 opacity-0 overflow-hidden"
