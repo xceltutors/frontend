@@ -42,7 +42,7 @@ export default function NotFound() {
                 </h2>
 
                 <p className="text-[var(--custom-gray-50)] max-w-md mb-8 text-base">
-                    Something went wrong. Sorry we can't find the page you're looking for.
+                    Something went wrong. Sorry we cant find the page youre looking for.
                 </p>
 
                 <Link
