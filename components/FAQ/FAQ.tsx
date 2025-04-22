@@ -29,7 +29,7 @@ export function FAQ() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-white py-6  border-b-2 border-b-gray-200 "
+            className="bg-white py-6  border-b-2 border-b-gray-200 px-4"
           >
             <button
               className="flex justify-between items-center w-full text-left"
@@ -39,9 +39,8 @@ export function FAQ() {
                 {faq.question}
               </h3>
               <svg
-                className={`w-6 h-6 transition-transform ${
-                  openIndex === index ? "transform rotate-180" : ""
-                }`}
+                className={`w-6 h-6 transition-transform ${openIndex === index ? "transform rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

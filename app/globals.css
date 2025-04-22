@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
     --custom-blue-50: #5E6282;
     --custom-blue-200: #ABCCD6;
@@ -12,6 +11,62 @@
     --custom-gray-800: #323232;
     --custom-orange-500: #F15A2B;
     --custom-yellow-500: #F0BB1F;
+}
+
+@layer utilities {
+    .shadow-glow {
+        position: relative;
+    }
+    .shadow-glow::before,
+    .shadow-glow::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 900px;
+        height: 400px;
+        background: #59B1E6;
+        border-radius: 9999px;
+        filter: blur(140px);
+        opacity: 0.3;
+        z-index: 100;
+        pointer-events: none;
+    }
+    .shadow-glow::before {
+        left: -400px;
+    }
+    .shadow-glow::after {
+        right: -400px;
+    }
+    @media (max-width: 1024px) {
+        .shadow-glow::before,
+        .shadow-glow::after {
+            width: 600px;
+            height: 300px;
+            filter: blur(100px);
+            opacity: 0.2;
+        }
+        .shadow-glow::before {
+            left: -300px;
+        }
+        .shadow-glow::after {
+            right: -300px;
+        }
+    }
+    @media (max-width: 640px) {
+        .shadow-glow::before,
+        .shadow-glow::after {
+            width: 400px;
+            height: 200px;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+        .shadow-glow::before {
+            left: -200px;
+        }
+        .shadow-glow::after {
+            right: -200px;
+        }
+    }
 }
 
 body {

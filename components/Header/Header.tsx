@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { navItems } from "./data";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export function Header() {
         className="w-full mx-auto h-[5rem] md:h-[7.75rem] flex items-center justify-between px-[3rem]
       bg-cover bg-center rounded-md bg-gray-100 relative"
       >
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             width={60}
             height={60}
@@ -25,9 +26,9 @@ export function Header() {
           <span className="font-(family-name:--font-volkhov) text-2xl md:text-4xl text-[var(--custom-blue-900)] font-bold">
             celtutors
           </span>
-        </div>
+        </Link>
 
-        <nav className="hidden lg:flex gap-8 font-[var(--font-poppins)]">
+        <nav className="hidden min-[1550px]:flex gap-8 font-[var(--font-poppins)]">
           {navItems.map((item, index) => (
             <a
               key={index}
@@ -42,7 +43,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden min-[1550px]:flex items-center gap-4">
           <button className="px-6 py-1.5 border-2 border-[var(--custom-blue-700)] text-[var(--custom-blue-700)] rounded-md font-medium">
             Login
           </button>
@@ -52,7 +53,7 @@ export function Header() {
         </div>
 
         <button
-          className="lg:hidden z-30 text-[var(--custom-blue-900)]"
+          className="max-[1550px]:flex hidden z-30 text-[var(--custom-blue-900)]"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -61,11 +62,10 @@ export function Header() {
         <div
           className={`lg:hidden absolute top-full left-0 w-full bg-white rounded-b-md 
             shadow-md transition-all duration-300 ease-in-out 
-        ${
-          menuOpen
-            ? "max-h-96 py-6 opacity-100"
-            : "max-h-0 opacity-0 overflow-hidden"
-        }`}
+        ${menuOpen
+              ? "max-h-96 py-6 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+            }`}
         >
           <nav className="flex flex-col items-center gap-4 font-[var(--font-poppins)]">
             {navItems.map((item, index) => (
