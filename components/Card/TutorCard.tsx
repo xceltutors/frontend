@@ -21,7 +21,7 @@ export function TutorCard({
 }) {
   return (
     <div className="relative w-full max-w-sm group">
-      <div className="absolute top-12.5 left-19 w-full h-full bg-white rounded-2xl border border-gray-100 overflow-hidden">
+      <div className="hidden md:inline absolute top-12.5 left-19 w-full h-full bg-white rounded-2xl border border-gray-100 overflow-hidden">
         <div className="p-4 opacity-80">
           <div className="relative h-72 w-full rounded-xl overflow-hidden mb-4">
             <div className="absolute right-0 top-0 w-[10%] h-full">
