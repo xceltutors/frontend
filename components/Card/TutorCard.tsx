@@ -2,16 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock } from "lucide-react";
 
-interface TutorCardProps {
-  name: string;
-  isSuper?: boolean;
-  description: string;
-  hourlyRate: number;
-  currency?: string;
-  imageUrl: string;
-  profileUrl: string;
-}
-
 export function TutorCard({
   name,
   isSuper = false,
@@ -20,7 +10,15 @@ export function TutorCard({
   currency = "€",
   imageUrl,
   profileUrl = "#",
-}: TutorCardProps) {
+}: {
+  name: string;
+  isSuper?: boolean;
+  description: string;
+  hourlyRate: number;
+  currency?: string;
+  imageUrl: string;
+  profileUrl: string;
+}) {
   return (
     <div className="relative w-full max-w-sm group">
       <div className="absolute top-12.5 left-19 w-full h-full bg-white rounded-2xl border border-gray-100 overflow-hidden">
