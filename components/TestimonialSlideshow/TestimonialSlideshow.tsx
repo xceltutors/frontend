@@ -20,7 +20,7 @@ export default function TestimonialSlideshow() {
   };
 
   return (
-    <section className="w-full py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
+    <section className="w-full py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-60">
       <div className="max-w-7xl mx-auto lg:max-w-full">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-10">
           <div className="w-full lg:w-[40%] space-y-3 mb-8 lg:mb-0">
@@ -59,7 +59,7 @@ export default function TestimonialSlideshow() {
                     </div>
 
                     <div className="md:w-2/3 lg:w-3/4">
-                      <p className="mb-4 sm:mb-6 text-sm sm:text-base md:text-lg md:text-left text-gray-700">
+                      <p className="mb-4 sm:mb-6 text-sm sm:text-base md:text-lg md:text-left text-gray-700 text-justify">
                         {testimonial.text}
                       </p>
                       <div className="text-left">

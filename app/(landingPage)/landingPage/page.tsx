@@ -15,14 +15,14 @@ export default function LandingPage() {
       <Hero />
       <section
         className="w-full h-auto lg:h-[33.75rem] flex flex-col md:flex-row gap-8 py-4 sm:py-6
-       md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+       md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-60"
       >
         <TextInformation />
         <CardLandingPage />
       </section>
       <TestimonialSlideshow />
       <Tutors />
-      <section className="w-full h-auto py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
+      <section className="w-full h-auto py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-60">
         <div className="flex flex-col space-y-3 max-w-7xl lg:max-w-full">
           <span className="text-base md:text-xl text-[var(--custom-blue-50)] font-semibold">
             Popular Subjects
@@ -43,7 +43,7 @@ export default function LandingPage() {
                 height={120}
                 src="/images/arrow-down-popular.svg"
                 alt="arrow faq"
-                className="object-contain sm:w-24 md:w-32 lg:w-40"
+                className="object-contain sm:w-24 md:w-32 lg:w-60"
               />
             </div>
           </div>
