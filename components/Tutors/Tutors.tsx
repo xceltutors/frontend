@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export default function Tutors() {
   return (
     <section className="bg-[var(--custom-blue-700)] text-white py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto lg:max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div className="max-w-xl space-y-3 sm:space-y-4 mx-auto lg:mx-0  lg:text-left">
             <h3 className="text-base md:text-lg lg:text-xl font-semibold">

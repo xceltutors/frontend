@@ -21,7 +21,7 @@ export default function TestimonialSlideshow() {
 
   return (
     <section className="w-full py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto lg:max-w-full">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 lg:gap-10">
           <div className="w-full lg:w-[40%] space-y-3 mb-8 lg:mb-0">
             <h3 className="text-[var(--custom-blue-50)] text-base sm:text-lg md:text-xl font-semibold">
@@ -41,11 +41,10 @@ export default function TestimonialSlideshow() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
-                  className={`transition-opacity duration-500 ${
-                    currentSlide === index
-                      ? "block opacity-100"
-                      : "hidden opacity-0"
-                  }`}
+                  className={`transition-opacity duration-500 ${currentSlide === index
+                    ? "block opacity-100"
+                    : "hidden opacity-0"
+                    }`}
                 >
                   <div className="flex flex-col items-start md:flex-row gap-6">
                     <div className="mb-6 flex justify-center md:mb-0 md:w-1/3 lg:w-1/4">
@@ -76,11 +75,10 @@ export default function TestimonialSlideshow() {
                             <button
                               key={idx}
                               onClick={() => goToSlide(idx)}
-                              className={`mx-1 h-2 w-2 sm:h-3 sm:w-3 rounded-full transition-colors ${
-                                currentSlide === idx
-                                  ? "bg-orange-500"
-                                  : "bg-gray-300"
-                              }`}
+                              className={`mx-1 h-2 w-2 sm:h-3 sm:w-3 rounded-full transition-colors ${currentSlide === idx
+                                ? "bg-orange-500"
+                                : "bg-gray-300"
+                                }`}
                               aria-label={`Go to slide ${idx + 1}`}
                             />
                           ))}
