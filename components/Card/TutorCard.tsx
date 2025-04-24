@@ -20,8 +20,9 @@ export function TutorCard({
   profileUrl: string;
 }) {
   return (
-    <div className="relative w-full max-w-sm group">
-      <div className="hidden md:inline absolute top-12.5 left-19 w-full h-full bg-white rounded-2xl border border-gray-100 overflow-hidden">
+    <div className="relative w-full max-w-sm group shadow-glow-right z-10">
+      <div className="hidden md:inline absolute top-12.5 left-19 w-full h-full
+       bg-white rounded-2xl border border-gray-100 overflow-hidden">
         <div className="p-4 opacity-80">
           <div className="relative h-72 w-full rounded-xl overflow-hidden mb-4">
             <div className="absolute right-0 top-0 w-[10%] h-full">
@@ -38,7 +39,7 @@ export function TutorCard({
           </div>
 
           <div className="relative overflow-hidden h-12">
-            <p className="text-gray-600 text-sm absolute -top-1">
+            <p className="text-[var(--custom-gray-100)] text-sm absolute -top-1">
               {description}
             </p>
           </div>
@@ -48,7 +49,7 @@ export function TutorCard({
               {currency} {hourlyRate}
               <span className="text-sm font-normal text-gray-600">/hr</span>
             </div>
-            <div className="flex items-center text-sm text-gray-500">
+            <div className="flex items-center text-sm text-[var(--custom-blue-900)] underline">
               <Clock className="h-4 w-4 mr-1" />
               See tutor&apos;s...
             </div>
@@ -79,7 +80,7 @@ export function TutorCard({
             </div>
           </div>
 
-          <p className="text-gray-600 text-sm mb-4">{description}</p>
+          <p className="text-[var(--custom-gray-100)] text-sm mb-4">{description}</p>
 
           <div className="flex items-center justify-between">
             <div className="font-bold text-gray-900">
@@ -88,7 +89,7 @@ export function TutorCard({
             </div>
             <Link
               href={profileUrl}
-              className="flex items-center text-sm text-gray-500 hover:text-gray-700"
+              className="flex items-center text-sm text-[var(--custom-blue-900)] underline"
             >
               <Clock className="h-4 w-4 mr-1" />
               See tutor&apos;s profile
