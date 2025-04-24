@@ -154,9 +154,9 @@ export default function Prices() {
           </p>
         </div>
 
-        <h1 className="w-[80%]  md:-[w-full] font-(family-name:--font-volkhov) text-2xl md:text-5xl font-bold text-[var(--custom-blue-900)]">
+        <h2 className="w-[80%]  md:-[w-full] font-(family-name:--font-volkhov) text-2xl md:text-5xl font-bold text-[var(--custom-blue-900)]">
           Speak to a tutor, or become part <br /> of our community as one!
-        </h1>
+        </h2>
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
           <Link
             href="#"

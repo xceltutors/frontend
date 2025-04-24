@@ -5,7 +5,7 @@ export const navItems = [
   },
   {
     name: "Why online tutoring",
-    link: "#",
+    link: "/reason",
   },
   {
     name: "Become a tutor",
