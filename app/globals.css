@@ -11,6 +11,7 @@
     --custom-gray-800: #323232;
     --custom-orange-500: #F15A2B;
     --custom-yellow-500: #F0BB1F;
+    --custom-green-500: #00BE63;
 }
 
 @layer utilities {
