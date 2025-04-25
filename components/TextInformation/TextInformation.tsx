@@ -3,7 +3,7 @@ import { InfoOption } from "../InfoOption/InfoOption";
 
 export function TextInformation() {
   return (
-    <div className="w-[100%] md:w-[55%]">
+    <div className="w-[100%] md:w-[55%] h-auto">
       <div className="mb-3">
         <p className="text-[var(--custom-blue-50)] text-[1.125rem] font-semibold">
           Easy and Fast
