@@ -28,7 +28,7 @@ export function PopUpCookie() {
                 We use cookies to personalise your experience on the site.
             </p>
             <strong className="text-white text-lg">
-                Let us know if you’re okay with this
+                Let us know if you&apos;re okay with this
             </strong>
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <button
