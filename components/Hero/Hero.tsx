@@ -39,9 +39,9 @@ export function Hero() {
 
       <div className="w-full lg:w-[58%] h-auto flex flex-col items-center justify-center order-1 lg:order-2">
         <Image
-          width={444}
-          height={467}
-          src="/images/background-banner.svg"
+          width={500}
+          height={500}
+          src="/images/bg-hero.svg"
           alt="Imagem de fundo do Hero"
           className="object-cover"
         />
