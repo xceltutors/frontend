@@ -17,6 +17,6 @@ export const navItems = [
   },
   {
     name: "About us",
-    link: "#",
+    link: "/about",
   },
 ];
