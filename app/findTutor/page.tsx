@@ -2,22 +2,12 @@
 
 import DefaultLayout from "@/components/Layout/DefaultLayout";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import qs from "qs";
-
-interface ITutor {
-  id: number;
-  name: string;
-  type: "Super Tutor" | "Tutor" | "Teacher";
-  university: string;
-  lessons: number;
-  description: string;
-  price: number;
-  image: string;
-}
+import { ITutor } from "@/@types/Tutor/ITutor";
+import { CardTutor } from "@/components/CardTutor/CardTutor";
 
 export default function FindTutor() {
   const router = useRouter();
@@ -132,18 +122,6 @@ export default function FindTutor() {
     router.push(`?${query}`);
     setCurrentPage(page);
   };
-  const getTutorTypeClass = (type: string) => {
-    switch (type) {
-      case "Super Tutor":
-        return "bg-teal-500 text-white";
-      case "Teacher":
-        return "bg-amber-500 text-white";
-      case "Tutor":
-        return "bg-orange-300 text-white";
-      default:
-        return "bg-gray-500 text-white";
-    }
-  };
   return (
     <DefaultLayout>
       <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6">
@@ -154,7 +132,7 @@ export default function FindTutor() {
           Lets find a perfect tutor for your needs
         </h2>
       </section>
-      <section className="bg-slate-100 min-h-screen p-4 md:p-6">
+      <section className="min-h-screen p-4 md:p-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-6">
             <h2 className="text-lg font-medium mb-2">Filters</h2>
@@ -216,6 +194,35 @@ export default function FindTutor() {
                 </p>
               </div>
             )}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8">
+            {tutors.map((tutor) => (
+              <CardTutor key={tutor.id} {...tutor} />
+            ))}
+          </div>
+
+          <div className="w-full flex justify-center mt-8">
+            <nav className="flex items-center gap-1">
+              {[1, 2, 3, 4, 5].map((page) => (
+                <button
+                  key={page}
+                  onClick={() => goToPage(page)}
+                  className={`w-8 h-8 flex items-center justify-center rounded-full ${
+                    currentPage === page
+                      ? "bg-[var(--custom-blue-700)] text-white"
+                      : "transparant text-[var(--custom-blue-700)]"
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                className="w-8 h-8 flex items-center justify-center transparent text-[var(--custom-blue-700)]"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </nav>
           </div>
         </div>
       </section>
