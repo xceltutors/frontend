@@ -1,7 +1,7 @@
 export const navItems = [
   {
     name: "Find a tutor",
-    link: "#",
+    link: "/findTutor",
   },
   {
     name: "Why online tutoring",
