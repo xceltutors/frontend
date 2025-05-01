@@ -6,8 +6,8 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import qs from "qs";
-import { ITutor } from "@/@types/Tutor/ITutor";
-import { CardTutor } from "@/components/CardTutor/CardTutor";
+import { CardTutor } from "@/components/Card/CardTutor";
+import { tutors } from "./data";
 
 export default function FindTutor() {
   const router = useRouter();
@@ -17,74 +17,6 @@ export default function FindTutor() {
   const [level, setLevel] = useState("");
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [tutors] = useState<ITutor[]>([
-    {
-      id: 1,
-      name: "Alice Jhonson",
-      type: "Super Tutor",
-      university: "University of Cambridge",
-      lessons: 23,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-      id: 2,
-      name: "Bob Smith",
-      type: "Tutor",
-      university: "University of Cambridge",
-      lessons: 0,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-      id: 3,
-      name: "Bob Smith",
-      type: "Teacher",
-      university: "University of Cambridge",
-      lessons: 0,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-      id: 4,
-      name: "Alice Jhonson",
-      type: "Super Tutor",
-      university: "University of Cambridge",
-      lessons: 23,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-      id: 5,
-      name: "Alice Jhonson",
-      type: "Super Tutor",
-      university: "University of Cambridge",
-      lessons: 23,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-      id: 6,
-      name: "Bob Smith",
-      type: "Tutor",
-      university: "University of Cambridge",
-      lessons: 0,
-      description:
-        "Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students expert with a focus on theoretical and applied physics...",
-      price: 50,
-      image: "/placeholder.svg?height=100&width=100",
-    },
-  ]);
 
   useEffect(() => {
     const subject = searchParams.get("subject") || "";
@@ -124,17 +56,20 @@ export default function FindTutor() {
   };
   return (
     <DefaultLayout>
-      <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6">
+      <section
+        className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center
+       py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+      >
         <h2
-          className="w-[85%] md:w-[50%] lg:w-[35%] font-(family-name:--font-volkhov) text-4xl lg:text-5xl 
+          className="w-[85%] md:w-[50%] lg:w-[48%] font-(family-name:--font-volkhov) text-4xl lg:text-5xl 
                 font-bold text-[var(--custom-blue-900)]"
         >
           Lets find a perfect tutor for your needs
         </h2>
       </section>
-      <section className="min-h-screen p-4 md:p-6">
+      <section className="min-h-screen p-4 md:p-6 py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-46">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-6">
+          <div className="mb-10">
             <h2 className="text-lg font-medium mb-2">Filters</h2>
             <div className="flex flex-col md:flex-row gap-4">
               <div className="relative w-full md:w-[35%]">
