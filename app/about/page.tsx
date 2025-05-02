@@ -74,10 +74,10 @@ export default function About() {
               <div className="w-[55%] flex-shrink-0 mx-auto sm:mx-0">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gray-200 rounded-xl overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=192&width=192"
+                    src="/images/Joao.svg"
                     alt="João Florido"
-                    width={192}
-                    height={192}
+                    width={259.71624755859375}
+                    height={259.71624755859375}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -109,9 +109,12 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex flex-col-reverse md:flex-row gap-6 sm:gap-8">
-              <div className="w-[75%]">
-                <div className="bg-white/70 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <div
+              className="flex flex-col-reverse justify-between md:flex-row gap-6 sm:gap-8 
+                border border-[var(--custom-blue-50)] rouded-md"
+            >
+              <div className="w-[50%]">
+                <div className="p-6 sm:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
                     <h2 className="text-xl sm:text-2xl font-bold text-navy-900">
                       Eduardo Carvalho
@@ -137,29 +140,27 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="flex-1 flex-shrink-0 mx-auto md:mx-0">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 bg-blue-100 rounded-3xl p-4 border-4 border-blue-200">
-                  <div className="w-full h-full bg-gray-200 rounded-xl overflow-hidden">
-                    <Image
-                      src="/placeholder.svg?height=160&width=160"
-                      alt="Eduardo Carvalho"
-                      width={160}
-                      height={160}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+              <div className="w-[30%] flex-shrink-0 mx-auto md:mx-0">
+                <div className="w-full h-full  rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/Eduardo.svg"
+                    alt="Eduardo Carvalho"
+                    width={259.71624755859375}
+                    height={259.71624755859375}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
 
             <div className="bg-white/70 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row gap-6 sm:gap-8">
               <div className="w-[55%] flex-shrink-0 mx-auto sm:mx-0">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gray-200 rounded-xl overflow-hidden">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-xl overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=192&width=192"
+                    src="/images/Noah.svg"
                     alt="Noah Rijshouwer"
-                    width={192}
-                    height={192}
+                    width={259.71624755859375}
+                    height={259.71624755859375}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -194,30 +195,43 @@ export default function About() {
             </div>
           </div>
 
-          {/* Contact Section */}
           <div className="mt-20 text-center">
-            <p className="text-gray-500 mb-2">We are glad to help you</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-6">
-              Get in touch
-            </h2>
+            <div className="relative glow-center">
+              <p className="text-gray-500 mb-2 text-base md:text-xl font-semibold">
+                We are glad to help you
+              </p>
+              <h2
+                className="font-(family-name:--font-volkhov) text-2xl sm:text-5xl 
+              font-bold text-navy-900 mb-6"
+              >
+                Get in touch
+              </h2>
+            </div>
 
-            <p className="mb-2">
+            <p className="text-[var(--custom-blue-50)] mb-2 font-medium text-base md:text-2xl">
               Feel free to reach out on{" "}
               <a
                 href="https://linkedin.com"
-                className="text-blue-600 font-medium hover:underline"
+                className="text-[var(--custom-blue-700)] font-medium hover:underline"
               >
                 LinkedIn!
               </a>
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-[var(--custom-blue-50)] mb-6 font-medium text-base md:text-2xl">
               Its a pleasure for us to talk with you individually.
             </p>
 
-            <p className="text-gray-600 mb-3">Or email us at:</p>
-            <div className="inline-flex items-center bg-white border border-gray-200 rounded-md px-4 py-2">
-              <Mail className="w-4 h-4 text-gray-500 mr-2" />
-              <span className="text-gray-700">hello@xceltutors.com</span>
+            <p className="text-[var(--custom-gray-800)] font-medium text-base md:text-2xl mb-3">
+              Or email us at:
+            </p>
+            <div
+              className="inline-flex items-center bg-white border-2
+             border-[var(--custom-gray-800)] rounded-sm px-4 py-1.5"
+            >
+              <Mail className="w-4 h-4 text-[var(--custom-gray-800)] mr-2" />
+              <span className="text-[var(--custom-gray-800)]">
+                hello@xceltutors.com
+              </span>
             </div>
           </div>
         </div>
