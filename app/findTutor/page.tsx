@@ -138,7 +138,7 @@ export default function FindTutor() {
                 <button
                   onClick={applyFilters}
                   className="bg-[var(--custom-orange-500)] text-white px-4 py-1 rounded-md 
-          hover:bg-orange-600 transition-colors"
+          hover:bg-orange-600 transition-colors cursor-pointer"
                 >
                   Apply
                 </button>
@@ -177,7 +177,7 @@ export default function FindTutor() {
                       onClick={() => removeFilter("subject")}
                       className="cursor-pointer"
                     >
-                      <X className="w-3 h-3" color="#000" />
+                      <X className="w-3 h-3 cursor-pointer" color="#000" />
                     </button>
                   </div>
                 )}
@@ -189,7 +189,7 @@ export default function FindTutor() {
                   >
                     {level}
                     <button onClick={() => removeFilter("level")}>
-                      <X className="w-3 h-3" color="#000" />
+                      <X className="w-3 h-3 cursor-pointer" color="#000" />
                     </button>
                   </div>
                 )}
@@ -201,7 +201,7 @@ export default function FindTutor() {
                   >
                     {price}$
                     <button onClick={() => removeFilter("price")}>
-                      <X className="w-3 h-3" color="#000" />
+                      <X className="w-3 h-3 cursor-pointer" color="#000" />
                     </button>
                   </div>
                 )}
@@ -210,7 +210,7 @@ export default function FindTutor() {
               <button
                 onClick={clearAllFilters}
                 className="border border-[var(--custom-blue-700)] text-[var(--custom-blue-700)]
-                 text-sm ml-2 px-1.5 py-1.5 rounded-sm"
+                 text-sm ml-2 px-1.5 py-1.5 rounded-sm cursor-pointer"
               >
                 Clear filters
               </button>
@@ -230,7 +230,7 @@ export default function FindTutor() {
               <button
                 key={page}
                 onClick={() => goToPage(page)}
-                className={`w-8 h-8 flex items-center justify-center rounded-full ${
+                className={`w-8 h-8 flex items-center justify-center rounded-full cursor-pointer ${
                   currentPage === page
                     ? "bg-[var(--custom-blue-700)] text-white"
                     : "transparant text-[var(--custom-blue-700)]"
@@ -241,7 +241,8 @@ export default function FindTutor() {
             ))}
             <button
               onClick={() => goToPage(currentPage + 1)}
-              className="w-8 h-8 flex items-center justify-center transparent text-[var(--custom-blue-700)]"
+              className="w-8 h-8 flex items-center cursor-pointer 
+              justify-center transparent text-[var(--custom-blue-700)]"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

@@ -82,7 +82,7 @@ export default function About() {
                 <div className="w-40 h-40 sm:w-[260px] sm:h-[260px] rounded-xl overflow-hidden">
                   <Image
                     src="/images/Joao.svg"
-                    alt="João Florido"
+                    alt="Joao Florido"
                     width={259.71624755859375}
                     height={259.71624755859375}
                     className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ export default function About() {
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
                   <h2 className="text-xl sm:text-2xl font-bold text-[var(--custom-blue-900)]">
-                    João Florido
+                    Joao Florido
                   </h2>
                   <a
                     href="https://linkedin.com"
