@@ -1,7 +1,7 @@
 export const navItems = [
   {
     name: "Find a tutor",
-    link: "/findTutor",
+    link: "/find-tutor",
   },
   {
     name: "Why online tutoring",
@@ -9,7 +9,7 @@ export const navItems = [
   },
   {
     name: "Become a tutor",
-    link: "/becameTutor",
+    link: "/become-tutor",
   },
   {
     name: "Prices",
