@@ -1,8 +1,7 @@
-import { TutorCard } from "@/components/Card/TutorCard";
-import { InfoPrice } from "@/components/InfoPrice/InfoPrice";
+import { InfoOption } from "@/components/InfoOption/InfoOption";
 import DefaultLayout from "@/components/Layout/DefaultLayout";
+import { ArrowRight, FilePen, Shield, User, UserCheck } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function BecameTutor() {
   return (
@@ -53,132 +52,102 @@ export default function BecameTutor() {
           />
         </div>
       </section>
-      <section className="relative w-full bg-red-300">
-        <Image
-          width={200}
-          height={85.75}
-          src="/images/arrow-left-price.svg"
-          alt="Arrow Left Price"
-          className="absolute left-0 object-cover top-[40%]"
-        />
 
+      <section
+        className="relative w-full h-auto lg:h-[33.75rem] flex flex-col gap-8 py-4 sm:py-6
+                   md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-60"
+      >
         <Image
           width={200}
           height={85.75}
           src="/images/arrow-hand.svg"
           alt="Arrow Hero"
-          className="absolute right-0 object-cover"
+          className="absolute right-[20%] object-cover"
         />
-        <div
-          className="w-full mx-auto  bg-[var(--custom-blue-700)] flex flex-col items-center justify-center 
-            gap-8 lg:gap-0 h-auto py-5 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
-        >
-          <h1 className="text-2xl md:text-[40px] text-white text-center mb-2 md:mb-3 font-semibold">
-            Excellent tutors with different range of budgets
-          </h1>
-          <p className="text-base md:text-xl text-white text-center w-[70%]">
-            Once personally interviewed and ready to start teach, our tutors set
-            their own prices based on their experience. On this page you can see
-            what you can expect at each price point, most tutors charge between
-            £25-£32/hr for their services.
-          </p>
+        <div className="glow-info-option mb-3"></div>
 
-          <div className="w-[95%] md:w-[80%] grid grid-cols-1 lg:grid-cols-3 items-center justify-center mt-10 gap-5 pt-[1rem] pb-[1.5rem] mb-10">
-            <InfoPrice
-              price="£25 - £32"
-              description="Usually new tutors with lots of 
-                        availability and trying to get some great early reviews will
-                        charge this price."
-            />
-            <InfoPrice
-              price="£33 - £48"
-              description="Tutors at this rage will be tutoring for over 6 months at least,
-                         completed lots of tutorials and received very positive feedback."
-            />
-            <InfoPrice
-              price="£49 - £67"
-              description="This is a rage of popular tutors. 
-                        Excellent reviews and a track record of proven results."
-            />
-          </div>
-          <i className="text-base md:text-xl text-white text-center">
-            The lesson cost includes the Platform Fee we take to make lessons
-            happen.
-          </i>
+        <h2
+          className="font-(family-name:--font-volkhov) text-[2.35rem] md:text-[3.125rem]
+                 font-[700] text-[var(--custom-blue-900)] mb-8 leading-tight"
+        >
+          What we&apos;ll need
+          <br />
+          from you
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 space-y-6">
+          <InfoOption
+            icon={<User className="w-[1.5rem] h-[1.5rem] text-white" />}
+            bgColor="bg-[var(--custom-blue-700)]"
+            title="Educational background"
+            description="We'll ask about your qualifications to match you 
+                        with suitable students and subjects."
+            sizeDescription={25}
+          />
+          <InfoOption
+            icon={<Shield className="w-[1.5rem] h-[1.5rem] text-white" />}
+            bgColor="bg-[var(--custom-blue-700)]"
+            title="DBS  Certificate"
+            description="This ensures the safety of our students and complies 
+                        with UK regulations for working with minors."
+            sizeDescription={25}
+          />
+          <InfoOption
+            icon={<UserCheck className="w-[1.5rem] h-[1.5rem] text-white" />}
+            bgColor="bg-[var(--custom-blue-700)]"
+            title="ID Verification"
+            description="We'll need a government-issued ID to verify your 
+                        identity and maintain the integrity of our platform."
+            sizeDescription={25}
+          />
+          <InfoOption
+            icon={<FilePen className="w-[1.5rem] h-[1.5rem] text-white" />}
+            bgColor="bg-[var(--custom-blue-700)]"
+            title="CV  or Resume"
+            description="Your experience helps us showcase your expertise to
+                        potential students and parents."
+            sizeDescription={25}
+          />
         </div>
       </section>
 
       <section
-        className="w-full mx-auto flex flex-col-reverse lg:flex-row items-center justify-between 
+        className="w-full mx-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-between 
             gap-8 lg:gap-0 h-auto lg:h-[35rem] sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
       >
+        <div className="w-full lg:w-[50%] h-auto flex flex-col items-center justify-center order-1 lg:order-2">
+          <Image
+            width={311}
+            height={327}
+            src="/images/becameTutor-banner.svg"
+            alt="Imagem de fundo do Hero"
+            className="object-cover mt-[0] lg:mt-[10%]"
+          />
+        </div>
         <div
-          className="w-full lg:w-[40%] h-auto  flex flex-col items-center space-y-4 order-2
+          className="w-full lg:w-[45%] h-auto flex flex-col items-center space-y-4 order-2
             lg:order-1 text-center lg:text-left ml-0 md:ml-[2rem]"
         >
           <h2
             className="font-(family-name:--font-volkhov) text-[var(--custom-blue-900)] font-bold
-                text-[2.5rem] text-center sm:text-4xl lg:text-[3rem] leading-tight"
+                text-[2.5rem] text-center lg:text-justify sm:text-4xl lg:text-[3rem] leading-tight"
           >
-            Set up free meetings before you book
+            Why online tutoring?
           </h2>
           <p
-            className="max-w-[90%] text-[var(--custom-gray-800)] text-base 
-                    sm:text-[1.25rem] text-center break-words"
+            className="max-w-[90%] text-[var(--custom-blue-50)] text-base 
+                sm:text-xl text-center md:text-justify break-words pb-2"
           >
-            When you find a tutor you like, you can{" "}
-            <b>book a free 15-minute meeting to ask questions</b>, find out
-            about their teaching style - and make sure they are someone you will
-            get on with!
+            Online tutoring is the perfect job for students and recent
+            graduates. You’ll make money, gain CV-boosting skills, and get that
+            warm fuzzy feeling of helping others.
           </p>
-          <Image
-            width={430.18}
-            height={85.75}
-            src="/images/arrow-hero.svg"
-            alt="Arrow Hero"
-            className="object-cover ml-[0] lg:ml-[20rem]"
-          />
-        </div>
-
-        <div className="w-full lg:w-[55%] flex items-center justify-center order-1 lg:order-2">
-          <div className="w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[300px]">
-            <TutorCard
-              name="Maria"
-              isSuper={true}
-              description="Experienced tutor specializing in Mathematics and Physics for GCSE and A-Level students"
-              hourlyRate={50}
-              imageUrl="/images/tutor-prices.svg"
-              profileUrl="#"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6 pt-[7%] pb-[10%]">
-        <div className="relative inline-block glow-center">
-          <p className="text-[var(--custom-blue-50)] text-sm md:text-base">
-            Choose your path
-          </p>
-        </div>
-
-        <h2 className="w-[80%]  md:-[w-full] font-(family-name:--font-volkhov) text-2xl md:text-5xl font-bold text-[var(--custom-blue-900)]">
-          Speak to a tutor, or become part <br /> of our community as one!
-        </h2>
-        <div className="flex flex-col sm:flex-row gap-4 pt-4">
-          <Link
-            href="#"
-            className="w-full sm:w-48 px-6 py-3 border border-[var(--custom-blue-900)] text-[var(--custom-blue-900)] font-medium 
-              rounded-md hover:bg-gray-100 transition-colors text-center"
+          <button
+            className="bg-[var(--custom-orange-500)] text-white text-sm md:text-base w-[80%] px-2 lg:px-25 py-2.5 md:py-3 rounded-md 
+          hover:bg-orange-600 transition-colors cursor-pointer font-semibold flex items-center justify-center gap-2"
           >
-            Become a tutor
-          </Link>
-          <Link
-            href="#"
-            className="w-full sm:w-48 px-6 py-3 border border-[var(--custom-blue-900)] text-[var(--custom-blue-900)]
-               font-medium rounded-md hover:bg-gray-100 transition-colors text-center"
-          >
-            Find a tutor
-          </Link>
+            Start your registration <ArrowRight />
+          </button>
         </div>
       </section>
     </DefaultLayout>
