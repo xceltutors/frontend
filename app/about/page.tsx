@@ -20,7 +20,7 @@ export default function About() {
           Driven by Educational psychology and technology we love
         </p>
       </section>
-      <section className="relative w-full bg-red-300">
+      <section className="relative w-full">
         <Image
           width={200}
           height={85.75}
@@ -73,7 +73,7 @@ export default function About() {
             behind XcelTutors
           </h1>
 
-          <div className="space-y-12 sm:space-y-16 md:space-y-20">
+          <div className="space-y-12 sm:space-y-16 md:space-y-20 px-[2rem] lg:px-[0]">
             <div
               className="border border-[var(--custom-blue-50)] rounded-3xl p-6 sm:p-[4rem]
              flex flex-col sm:flex-row gap-6 sm:gap-8"
@@ -98,7 +98,7 @@ export default function About() {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--custom-blue-700)] border-3
+                    className="w-[35px] h-[35px] flex items-center justify-center text-[var(--custom-blue-700)] border-3
                      border-[var(--custom-blue-700)] p-1 rounded-sm"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -119,9 +119,9 @@ export default function About() {
 
             <div
               className="border border-[var(--custom-blue-50)] rounded-3xl p-6
-             sm:p-[4rem] flex flex-col-reverse  justify-between sm:flex-row-reverse gap-6 sm:gap-8"
+             sm:p-[4rem] flex flex-col justify-between sm:flex-row-reverse gap-6 sm:gap-8"
             >
-              <div className="flex justify-end w-full sm:w-[45%]">
+              <div className="flex justify-center md:justify-end w-full sm:w-[45%]">
                 <div className="relative glow-image">
                   <div className="w-40 h-40 sm:w-[260px] sm:h-[260px] rounded-xl overflow-hidden">
                     <Image
@@ -134,7 +134,7 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <div className="w-[45%]">
+              <div className="w-full lg:w-[45%]">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
                   <h2 className="text-xl sm:text-2xl font-bold text-[var(--custom-blue-900)]">
                     Eduardo Carvalho
@@ -143,7 +143,7 @@ export default function About() {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--custom-blue-700)] border-3 
+                    className="w-[35px] h-[35px] flex items-center justify-center text-[var(--custom-blue-700)] border-3 
                     border-[var(--custom-blue-700)] p-1 rounded-sm"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -186,7 +186,7 @@ export default function About() {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--custom-blue-700)] border-3 border-[var(--custom-blue-700)] p-1 rounded-sm"
+                    className="w-[35px] h-[35px] flex items-center justify-center text-[var(--custom-blue-700)] border-3 border-[var(--custom-blue-700)] p-1 rounded-sm"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
