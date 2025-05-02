@@ -115,7 +115,15 @@ export default function BecameTutor() {
         className="w-full mx-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-between 
             gap-8 lg:gap-0 h-auto lg:h-[35rem] sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
       >
-        <div className="w-full lg:w-[50%] h-auto flex flex-col items-center justify-center order-1 lg:order-2">
+        <div className="relactive w-full lg:w-[50%] h-auto flex flex-col items-center justify-center order-1 lg:order-2">
+          <Image
+            width={131.00000034357745}
+            height={132}
+            src="/images/arrow-left.svg"
+            alt="Arrow Hero"
+            className="absolute bottom-[21%] left-[16%] object-cover"
+          />
+
           <Image
             width={311}
             height={327}
