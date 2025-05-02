@@ -5,7 +5,10 @@ import DefaultLayout from "@/components/Layout/DefaultLayout";
 export default function About() {
   return (
     <DefaultLayout>
-      <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6 pb-[2%]">
+      <section
+        className="w-full h-auto mx-auto flex items-center flex-col 
+      justify-center text-center space-y-6 pb-[2%]"
+      >
         <h2
           className="w-[85%] font-(family-name:--font-volkhov) text-2xl lg:text-5xl 
                 font-bold text-[var(--custom-blue-900)]"
@@ -62,17 +65,21 @@ export default function About() {
             className="text-center font-(family-name:--font-volkhov) text-2xl lg:text-5xl 
                 font-bold text-[var(--custom-blue-900)] mb-12 sm:mb-16"
           >
-            Meet the visionaries behind{" "}
+            Meet the{" "}
             <span className="relative">
-              XcelTutors
+              visionaries
               <span className="absolute bottom-1 left-0 w-full h-2 bg-red-200 -z-10 rounded-full"></span>
-            </span>
+            </span>{" "}
+            behind XcelTutors
           </h1>
 
           <div className="space-y-12 sm:space-y-16 md:space-y-20">
-            <div className="bg-white/70 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row gap-6 sm:gap-8">
-              <div className="w-[55%] flex-shrink-0 mx-auto sm:mx-0">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gray-200 rounded-xl overflow-hidden">
+            <div
+              className="border border-[var(--custom-blue-50)] rounded-3xl p-6 sm:p-[4rem]
+             flex flex-col sm:flex-row gap-6 sm:gap-8"
+            >
+              <div className="relative glow-image w-[55%] flex-shrink-0 mx-auto sm:mx-0">
+                <div className="w-40 h-40 sm:w-[260px] sm:h-[260px] rounded-xl overflow-hidden">
                   <Image
                     src="/images/Joao.svg"
                     alt="João Florido"
@@ -84,23 +91,24 @@ export default function About() {
               </div>
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h2 className="text-xl sm:text-2xl font-bold text-navy-900">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[var(--custom-blue-900)]">
                     João Florido
                   </h2>
                   <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600"
+                    className="text-[var(--custom-blue-700)] border-3
+                     border-[var(--custom-blue-700)] p-1 rounded-sm"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
-                <p className="text-gray-700 font-medium mb-2">
+                <p className="text-[var(--custom-blue-50)] font-medium mb-2">
                   CEO & Co-Founder
                 </p>
                 <p className="text-gray-500 text-sm mb-3">🎓 The Educator</p>
-                <p className="text-gray-600 text-sm sm:text-base">
+                <p className="text-[var(--custom-blue-900)] text-sm sm:text-base">
                   João is experience in Scottish classrooms shaped his vision
                   for personalized learning. Hes driven to create a platform
                   where students can explore complex ideas at their own pace
@@ -110,52 +118,56 @@ export default function About() {
             </div>
 
             <div
-              className="flex flex-col-reverse justify-between md:flex-row gap-6 sm:gap-8 
-                border border-[var(--custom-blue-50)] rouded-md"
+              className="border border-[var(--custom-blue-50)] rounded-3xl p-6
+             sm:p-[4rem] flex flex-col-reverse  justify-between sm:flex-row-reverse gap-6 sm:gap-8"
             >
-              <div className="w-[50%]">
-                <div className="p-6 sm:p-8">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <h2 className="text-xl sm:text-2xl font-bold text-navy-900">
-                      Eduardo Carvalho
-                    </h2>
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
+              <div className="flex justify-end w-full sm:w-[45%]">
+                <div className="relative glow-image">
+                  <div className="w-40 h-40 sm:w-[260px] sm:h-[260px] rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/Eduardo.svg"
+                      alt="Eduardo Carvalho"
+                      width={259.71624755859375}
+                      height={259.71624755859375}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <p className="text-gray-700 font-medium mb-2">
-                    CTO & Co-Founder
-                  </p>
-                  <p className="text-gray-500 text-sm mb-3">💻 The Architect</p>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    Eduardo is work at Farfetch taught him the power of
-                    technology to solve complex problems. He is focused on
-                    applying those lessons to create an intuitive platform that
-                    can adapt to the needs of students and tutors alike.
-                  </p>
                 </div>
               </div>
-              <div className="w-[30%] flex-shrink-0 mx-auto md:mx-0">
-                <div className="w-full h-full  rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/Eduardo.svg"
-                    alt="Eduardo Carvalho"
-                    width={259.71624755859375}
-                    height={259.71624755859375}
-                    className="w-full h-full object-cover"
-                  />
+              <div className="w-[45%]">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[var(--custom-blue-900)]">
+                    Eduardo Carvalho
+                  </h2>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--custom-blue-700)] border-3 
+                    border-[var(--custom-blue-700)] p-1 rounded-sm"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
                 </div>
+                <p className="text-[var(--custom-blue-50)] font-medium mb-2">
+                  CTO & Co-Founder
+                </p>
+                <p className="text-gray-500 text-sm mb-3">💻 The Architect</p>
+                <p className="text-[var(--custom-blue-900)] text-sm sm:text-base">
+                  Eduardo is work at Farfetch taught him the power of technology
+                  to solve complex problems. He is focused on applying those
+                  lessons to create an intuitive platform that can adapt to the
+                  needs of students and tutors alike.
+                </p>
               </div>
             </div>
 
-            <div className="bg-white/70 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row gap-6 sm:gap-8">
-              <div className="w-[55%] flex-shrink-0 mx-auto sm:mx-0">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-xl overflow-hidden">
+            <div
+              className="border border-[var(--custom-blue-50)] rounded-3xl p-6
+             sm:p-[4rem] flex flex-col sm:flex-row gap-6 sm:gap-8"
+            >
+              <div className="relative glow-image w-[55%] flex-shrink-0 mx-auto sm:mx-0">
+                <div className="w-40 h-40 sm:w-[260px] sm:h-[260px] rounded-xl overflow-hidden">
                   <Image
                     src="/images/Noah.svg"
                     alt="Noah Rijshouwer"
@@ -167,25 +179,25 @@ export default function About() {
               </div>
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h2 className="text-xl sm:text-2xl font-bold text-navy-900">
+                  <h2 className="text-xl sm:text-2xl font-bold text-[var(--custom-blue-900)]">
                     Noah Rijshouwer
                   </h2>
                   <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600"
+                    className="text-[var(--custom-blue-700)] border-3 border-[var(--custom-blue-700)] p-1 rounded-sm"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
-                <p className="text-gray-700 font-medium mb-2">
+                <p className="text-[var(--custom-blue-50)] font-medium mb-2">
                   Business Manager & Marketing Lead
                 </p>
                 <p className="text-gray-500 text-sm mb-3">
                   🚀 The Growth Strategist
                 </p>
-                <p className="text-gray-600 text-sm sm:text-base">
+                <p className="text-[var(--custom-blue-900)] text-sm sm:text-base">
                   Noah is background in marketing has been instrumental in
                   XcelTutors expansion strategy. He is focused on building
                   partnerships and refining our marketing approach to reach

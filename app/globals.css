@@ -116,6 +116,21 @@
         border-radius: 9999px;
         z-index: 0;
     }
+
+    .glow-image::before {
+        content: '';
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 350px;
+        background: #59B1E6;
+        filter: blur(80px);
+        opacity: 0.4;
+        border-radius: 9999px;
+        z-index: -1;
+    }
 }
 
 body {
