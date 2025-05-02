@@ -13,54 +13,42 @@ export default function FindTutor() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [subjects, setSubjects] = useState<string[]>([]);
-  const [levels, setLevels] = useState<string[]>([]);
-  const [prices, setPrices] = useState<string[]>([]);
+  const [subject, setSubject] = useState("");
+  const [level, setLevel] = useState("");
+  const [price, setPrice] = useState<string>("");
   const [showMoreFilters, setShowMoreFilters] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const handleMultiSelect = (
-    event: React.ChangeEvent<HTMLSelectElement>,
-    setState: React.Dispatch<React.SetStateAction<string[]>>
-  ) => {
-    const selectedOptions = Array.from(
-      event.target.selectedOptions,
-      (option) => option.value
-    );
-    setState(selectedOptions);
-  };
-
   useEffect(() => {
-    const subjectsFromQuery = searchParams.getAll("subject");
-    const levelsFromQuery = searchParams.getAll("level");
-    const pricesFromQuery = searchParams.getAll("price");
+    const subject = searchParams.get("subject") || "";
+    const level = searchParams.get("level") || "";
+    const price = searchParams.get("price") || "";
     const page = Number.parseInt(searchParams.get("page") || "1");
 
-    setSubjects(subjectsFromQuery);
-    setLevels(levelsFromQuery);
-    setPrices(pricesFromQuery);
+    setSubject(subject);
+    setLevel(level);
+    setPrice(price);
     setCurrentPage(page);
   }, [searchParams]);
 
-  const removeFilter = (type: string, value: string) => {
-    if (type === "subject")
-      setSubjects((prev) => prev.filter((s) => s !== value));
-    if (type === "level") setLevels((prev) => prev.filter((l) => l !== value));
-    if (type === "price") setPrices((prev) => prev.filter((p) => p !== value));
+  const removeFilter = (type: string) => {
+    if (type === "subject") setSubject("");
+    if (type === "level") setLevel("");
+    if (type === "price") setPrice("");
   };
 
   const clearAllFilters = () => {
-    setSubjects([]);
-    setLevels([]);
-    setPrices([]);
+    setSubject("");
+    setLevel("");
+    setPrice("");
   };
 
   const applyFilters = () => {
     const query = qs.stringify(
       {
-        subjects,
-        levels,
-        prices,
+        subject,
+        level,
+        price,
         page: 1,
       },
       { skipNulls: true }
@@ -72,9 +60,9 @@ export default function FindTutor() {
   const goToPage = (page: number) => {
     const query = qs.stringify(
       {
-        subjects,
-        levels,
-        prices,
+        subject,
+        level,
+        price,
         page,
       },
       { skipNulls: true }
@@ -104,8 +92,8 @@ export default function FindTutor() {
             <div className="w-full lg:w-[80%] flex flex-col gap-4 lg:flex-row">
               <div className="relative w-full md:w-[45%]">
                 <select
-                  value={subjects}
-                  onChange={() => setSubjects([])}
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   className="w-full p-2 border border-[#9F9F9F80] rounded-md appearance-none 
           pr-10 bg-[var(--custom-gray-250)] text-[#949494]"
                 >
@@ -119,8 +107,8 @@ export default function FindTutor() {
 
               <div className="relative w-full md:w-[45%]">
                 <select
-                  value={levels}
-                  onChange={() => setLevels([])}
+                  value={level}
+                  onChange={(e) => setLevel(e.target.value)}
                   className="w-full p-2 border border-[#9F9F9F80] rounded-md appearance-none 
           pr-10 bg-[var(--custom-gray-250)] text-[#949494]"
                 >
@@ -161,89 +149,62 @@ export default function FindTutor() {
           {showMoreFilters && (
             <div className="mt-4 relative w-full md:w-[35%]">
               <select
-                value={prices}
-                onChange={(e) => handleMultiSelect(e, setPrices)}
-                className="w-full p-2 border border-[#9F9F9F80] rounded-md appearance-none
-          pr-10 bg-[var(--custom-gray-250)] text-[#949494] h-[120px]"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="w-full p-2 border border-[#9F9F9F80] rounded-md appearance-none 
+          pr-10 bg-[var(--custom-gray-250)] text-[#949494]"
               >
-                <option
-                  value="40"
-                  className={`${
-                    prices.includes("40")
-                      ? "bg-[var(--custom-blue-700)] text-white border-b border-[var(--custom-blue-700)]"
-                      : ""
-                  }`}
-                >
-                  40$
-                </option>
-                <option
-                  value="50"
-                  className={`${
-                    prices.includes("50")
-                      ? "bg-[var(--custom-blue-700)] text-white border-b border-[var(--custom-blue-700)]"
-                      : ""
-                  }`}
-                >
-                  50$
-                </option>
-                <option
-                  value="60"
-                  className={`${
-                    prices.includes("60")
-                      ? "bg-[var(--custom-blue-700)] text-white border-b border-[var(--custom-blue-700)]"
-                      : ""
-                  }`}
-                >
-                  60$
-                </option>
+                <option value="40">40$</option>
+                <option value="50">50$</option>
+                <option value="60">60$</option>
+                <option value="70">70$</option>
               </select>
+
               <ChevronDown className="absolute right-3 top-3 w-4 h-4 text-gray-500" />
             </div>
           )}
 
-          {(subjects.length || levels.length || prices.length) > 0 && (
+          {(subject.length || level.length || price.length) > 0 && (
             <div className="mt-4 w-full flex justify-between gap-2 items-center">
               <div className="flex flex-wrap gap-3">
-                {subjects.map((subj) => (
+                {subject.length > 0 && (
                   <div
-                    key={subj}
-                    className="flex items-center gap-2 bg-[var(--custom-blue-700)] text-white px-3 py-1.5 rounded-md text-sm"
+                    className="flex items-center gap-2 border border-[var(--custom-blue-700)]
+                     text-[var(--custom-blue-700)] px-3 py-1 rounded-md text-sm"
                   >
-                    {subj}
+                    {subject}
                     <button
-                      onClick={() => removeFilter("subject", subj)}
+                      onClick={() => removeFilter("subject")}
                       className="cursor-pointer"
                     >
                       <X className="w-3 h-3" color="#000" />
                     </button>
                   </div>
-                ))}
+                )}
 
-                {levels.map((lvl) => (
+                {level.length > 0 && (
                   <div
-                    key={lvl}
-                    className="flex items-center gap-2 bg-[var(--custom-blue-700)]
-                   text-white px-3 py-1 rounded-md text-sm"
-                  >
-                    {lvl}
-                    <button onClick={() => removeFilter("level", lvl)}>
-                      <X className="w-3 h-3" color="#000" />
-                    </button>
-                  </div>
-                ))}
-
-                {prices.map((prc) => (
-                  <div
-                    key={prc}
                     className="flex items-center gap-2 border border-[var(--custom-blue-700)]
                      text-[var(--custom-blue-700)] px-3 py-1 rounded-md text-sm"
                   >
-                    {prc}$
-                    <button onClick={() => removeFilter("price", prc)}>
+                    {level}
+                    <button onClick={() => removeFilter("level")}>
                       <X className="w-3 h-3" color="#000" />
                     </button>
                   </div>
-                ))}
+                )}
+
+                {price.length > 0 && (
+                  <div
+                    className="flex items-center gap-2 border border-[var(--custom-blue-700)]
+                     text-[var(--custom-blue-700)] px-3 py-1 rounded-md text-sm"
+                  >
+                    {price}$
+                    <button onClick={() => removeFilter("price")}>
+                      <X className="w-3 h-3" color="#000" />
+                    </button>
+                  </div>
+                )}
               </div>
 
               <button
