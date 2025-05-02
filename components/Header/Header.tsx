@@ -30,7 +30,7 @@ export function Header() {
 
         <nav className="hidden min-[1480px]:flex gap-8 font-[var(--font-poppins)]">
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.link}
               className="relative text-[var(--custom-gray-800)] font-semibold text-base hover:text-orange-500 after:content-[''] 
@@ -39,7 +39,7 @@ export function Header() {
             after:rounded-md after:opacity-0 hover:after:opacity-100 transition-all duration-300"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -69,14 +69,14 @@ export function Header() {
         >
           <nav className="flex flex-col items-center gap-4 font-[var(--font-poppins)]">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.link}
                 className="text-[var(--custom-gray-800)] font-semibold text-lg hover:text-orange-500 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="flex flex-col gap-3 w-full items-center mt-4">
               <button

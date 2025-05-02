@@ -1,4 +1,3 @@
-import DefaultLayout from "@/components/Layout/DefaultLayout";
 import TestimonialSlideshow from "@/components/TestimonialSlideshow/TestimonialSlideshow";
 import { TextInformation } from "@/components/TextInformation/TextInformation";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import { FilePen, Shield, User, UserCheck } from "lucide-react";
 
 export default function Reason() {
   return (
-    <DefaultLayout>
+    <>
       <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6">
         <h2
           className="w-[85%] md:w-[50%] font-(family-name:--font-volkhov) text-4xl lg:text-[96px] 
@@ -118,6 +117,6 @@ export default function Reason() {
           Start your journey
         </Link>
       </div>
-    </DefaultLayout>
+    </>
   );
 }

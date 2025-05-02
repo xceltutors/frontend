@@ -1,12 +1,11 @@
 import { TutorCard } from "@/components/Card/TutorCard";
 import { InfoPrice } from "@/components/InfoPrice/InfoPrice";
-import DefaultLayout from "@/components/Layout/DefaultLayout";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Prices() {
   return (
-    <DefaultLayout>
+    <>
       <section
         className="w-full mx-auto flex flex-col-reverse lg:flex-row items-center justify-between 
             gap-8 lg:gap-0 h-auto lg:h-[35rem] sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
@@ -174,6 +173,6 @@ export default function Prices() {
           </Link>
         </div>
       </section>
-    </DefaultLayout>
+    </>
   );
 }
