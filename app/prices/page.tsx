@@ -45,9 +45,7 @@ export default function Prices() {
           />
         </div>
       </section>
-      <section
-        className="relative w-full bg-red-300"
-      >
+      <section className="relative w-full bg-red-300">
         <Image
           width={200}
           height={85.75}
@@ -63,8 +61,10 @@ export default function Prices() {
           alt="Arrow Hero"
           className="absolute right-0 object-cover"
         />
-        <div className="w-full mx-auto  bg-[var(--custom-blue-700)] flex flex-col items-center justify-center 
-            gap-8 lg:gap-0 h-auto py-5 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40">
+        <div
+          className="w-full mx-auto  bg-[var(--custom-blue-700)] flex flex-col items-center justify-center 
+            gap-8 lg:gap-0 h-auto py-5 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+        >
           <h1 className="text-2xl md:text-[40px] text-white text-center mb-2 md:mb-3 font-semibold">
             Excellent tutors with different range of budgets
           </h1>
@@ -75,7 +75,8 @@ export default function Prices() {
             £25-£32/hr for their services.
           </p>
 
-          <div className="w-[95%] md:w-[80%] grid grid-cols-1 lg:grid-cols-3 items-center justify-center mt-10 gap-5 pt-[1rem] pb-[1.5rem] mb-10">
+          <div className="w-[95%] md:w-[80%] grid grid-cols-1 lg:grid-cols-3 items-center
+           justify-center mt-10 gap-5 pt-[1rem] pb-[1.5rem] mb-10">
             <InfoPrice
               price="£25 - £32"
               description="Usually new tutors with lots of 
@@ -146,20 +147,23 @@ export default function Prices() {
         </div>
       </section>
 
-      <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6 pt-[7%] pb-[10%]">
+      <section className="w-full h-auto mx-auto flex items-center flex-col justify-center
+       text-center space-y-6 pt-[7%] pb-[10%]">
         <div className="relative inline-block glow-center">
           <p className="text-[var(--custom-blue-50)] text-sm md:text-base">
             Choose your path
           </p>
         </div>
 
-        <h2 className="w-[80%]  md:-[w-full] font-(family-name:--font-volkhov) text-2xl md:text-5xl font-bold text-[var(--custom-blue-900)]">
+        <h2 className="w-[80%]  md:-[w-full] font-(family-name:--font-volkhov) text-2xl md:text-5xl 
+        font-bold text-[var(--custom-blue-900)]">
           Speak to a tutor, or become part <br /> of our community as one!
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
           <Link
             href="#"
-            className="w-full sm:w-48 px-6 py-3 border border-[var(--custom-blue-900)] text-[var(--custom-blue-900)] font-medium 
+            className="w-full sm:w-48 px-6 py-3 border border-[var(--custom-blue-900)] 
+            text-[var(--custom-blue-900)] font-medium 
               rounded-md hover:bg-gray-100 transition-colors text-center"
           >
             Become a tutor

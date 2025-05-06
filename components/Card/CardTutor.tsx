@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function CardTutor({
+  id,
   name,
   description,
   image,
@@ -62,9 +63,9 @@ export function CardTutor({
               className="flex items-center gap-1 text-[var(--custom-blue-900)]"
             >
               <Info className="w-4 h-4" />
-              <span className="text-xs sm:text-sm underline">
+              <Link href={`tutor-profile/${id}`} className="text-xs sm:text-sm underline">
                 See tutor&apos;s profile
-              </span>
+              </Link>
             </Link>
           </div>
 
