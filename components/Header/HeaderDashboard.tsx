@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 
 export function HeaderDashboard() {
   const pathname = usePathname();
-  const showSearch = pathname !== "/dashboard";
+  const hiddenRoutes = ["/dashboard", "/find-a-tutor"];
+  const showSearch = !hiddenRoutes.includes(pathname);
 
   return (
     <header

@@ -101,8 +101,10 @@ export default function LessonCard({
 
       <div className="flex items-center justify-center">
         <button
+          type="button"
           onClick={onToggle}
-          className="flex items-center underline text-sm font-semibold text-[var(--custom-blue-900)]"
+          className="flex items-center underline text-sm cursor-pointer
+          font-semibold text-[var(--custom-blue-900)]"
         >
           {isExpanded ? (
             <>
