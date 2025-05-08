@@ -1,4 +1,4 @@
-import { Edit } from "lucide-react";
+import { Pencil } from "lucide-react";
 import Image from "next/image";
 
 export function ProfileSection() {
@@ -11,8 +11,8 @@ export function ProfileSection() {
                         font-bold text-[var(--custom-blue-900)] mb-2">
                             Elisa Anderson
                         </h3>
-                        <button className="text-gray-500 hover:text-gray-700">
-                            <Edit className="h-4 w-4" />
+                        <button className="text-gray-500 hover:text-gray-700 mt-[-14px]">
+                            <Pencil className="h-4 w-4" />
                         </button>
                     </div>
                     <p className="text-xs text-[var(--custom-gray-800)] text-center">

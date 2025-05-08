@@ -1,19 +1,13 @@
 import { ClassCard } from "@/components/Card/ClassCard";
 import { OutstandingActionCard } from "@/components/Card/OutstandingActionCard";
+import { SubTitle } from "@/components/SubTitle/SubTitle";
 import Link from "next/link";
 
 export default function Dashboard() {
     return (
         <div className="w-full flex flex-col px-4 mt-3">
             <div className="mb-8">
-                <div className="mb-4 flex items-center justify-between">
-                    <h3 className="font-(family-name:--font-volkhov) text-base lg:text-3xl font-bold text-[var(--custom-blue-900)]">
-                        Your next classes
-                    </h3>
-                    <Link href="#" className="text-sm text-gray-500 hover:underline">
-                        See all &gt;
-                    </Link>
-                </div>
+                <SubTitle subtitle="Your next classes" />
 
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     <ClassCard
@@ -36,15 +30,11 @@ export default function Dashboard() {
             </div>
 
             <div className="mb-8">
-                <div className="mb-4 flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-gray-800">Outstanding actions</h3>
-                    <Link href="#" className="text-sm text-gray-500 hover:underline">
-                        See all &gt;
-                    </Link>
-                </div>
+                <SubTitle subtitle="Outstanding actions" />
 
                 <div className="space-y-4">
                     <OutstandingActionCard
+                        urlImage="/images/classCard.png"
                         subject="Physics lesson"
                         tutor="Alice Johnson"
                         level="University level"
@@ -53,6 +43,7 @@ export default function Dashboard() {
                         isFree={true}
                     />
                     <OutstandingActionCard
+                        urlImage="/images/Ellipse 21.svg"
                         subject="Biology lesson"
                         tutor="Alice Johnson"
                         level="University level"
@@ -62,7 +53,6 @@ export default function Dashboard() {
                     />
                 </div>
             </div>
-
         </div>
     )
 }

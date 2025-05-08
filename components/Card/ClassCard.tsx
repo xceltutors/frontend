@@ -19,7 +19,7 @@ export function ClassCard({ urlImage, subject, tutor, level, date, time }: Class
     const formattedDate = format(parsedDate, "dd/MM");
 
     return (
-        <div className="rounded-lg bg-white p-4 border border-[var(--custom-gray-800)]">
+        <div className="rounded-lg  p-4 border border-[var(--custom-gray-800)]">
             <div className="mb-3 flex items-center gap-3">
                 <div className="h-15 w-15 overflow-hidden rounded-full border-3 border-[var(--custom-blue-700)]">
                     <Image
