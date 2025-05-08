@@ -1,3 +1,7 @@
+import { HeaderDashboard } from "@/components/Header/HeaderDashboard";
+
 export default function Dashboard() {
-    return <h1>Oi</h1>
+    return (
+        <HeaderDashboard />
+    )
 }
