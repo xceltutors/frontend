@@ -14,7 +14,7 @@ export function Sidebar({ sidebarOpen, toggleSidebar }: SidebarProps) {
     return (
         <>
             <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between 
-            bg-white p-4 shadow-md md:hidden">
+            bg-white p-4 shadow-md lg:hidden">
                 <button
                     onClick={toggleSidebar}
                     className="rounded-md bg-[var(--custom-blue-700)] p-2 text-white ml-4"
@@ -34,17 +34,17 @@ export function Sidebar({ sidebarOpen, toggleSidebar }: SidebarProps) {
 
             {sidebarOpen && (
                 <div
-                    className="fixed inset-0 z-30 bg-black/50 md:hidden"
+                    className="fixed inset-0 z-30 bg-black/50 lg:hidden"
                     onClick={toggleSidebar}
                 />
             )}
 
             <aside
                 className={`fixed inset-y-0 left-0 z-40 w-80 transform bg-white px-4
-                transition-transform duration-300 ease-in-out md:static md:translate-x-0 
-                ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
+                transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 
+                ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
             >
-                <div className="w-full flex items-center justify-center mb-6 md:mt-0">
+                <div className="w-full flex items-center justify-center mb-6 lg:mt-0">
                     <div className="flex h-40 w-40 justify-center rounded-md 
                     text-white border-b-2 border-gray-100">
                         <Image

@@ -8,7 +8,7 @@ export default function Dashboard() {
             <div className="mb-8">
                 <SubTitle subtitle="Your next classes" />
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
                     <ClassCard
                         urlImage="/images/classCard.png"
                         subject="Physics lesson"
