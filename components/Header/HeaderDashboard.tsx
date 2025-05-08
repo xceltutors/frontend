@@ -2,9 +2,9 @@ import { Bell, Search } from "lucide-react"
 
 export function HeaderDashboard() {
     return (
-        <header className="mb-8 mt-10 lg:mt-0 flex flex-col gap-4 rounded-lg p-4 lg:flex-row md:items-center md:justify-between">
+        <header className="mb-8 lg:mt-0 flex flex-col gap-4 rounded-lg px-4 lg:flex-row md:items-center md:justify-between">
             <div>
-                <h2 className="text-base font-bold text-[var(--custom-blue-900)] md:text-2xl">
+                <h2 className="font-(family-name:--font-volkhov) text-base font-bold text-[var(--custom-blue-900)] md:text-2xl">
                     Hello Elisa <span className="text-yellow-400">👋</span>
                 </h2>
                 <p className="text-sm text-[var(--custom-gray-800)] md:text-base">

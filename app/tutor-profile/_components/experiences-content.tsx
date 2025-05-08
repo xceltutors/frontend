@@ -6,7 +6,8 @@ export function ExperiencesContent() {
       {experiences.map((exp, i) => (
         <div key={i} className="mb-6">
           <div className="flex items-center mb-2">
-            <h3 className="font-(family-name:--font-volkhov) text-base md:text-xl font-bold text-[var(--custom-blue-900)]">
+            <h3 className="font-(family-name:--font-volkhov) text-base md:text-xl
+             font-bold text-[var(--custom-blue-900)]">
               {exp.title}
             </h3>
             <span className="mx-3 text-gray-400">—</span>
