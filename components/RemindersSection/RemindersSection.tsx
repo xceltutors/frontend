@@ -5,7 +5,7 @@ export function RemindersSection() {
     <div>
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-bold text-gray-800">Reminders</h3>
-        <button className="text-xs text-gray-500 hover:underline cursor-pointer">
+        <button className="text-xs text-gray-500 underline cursor-pointer">
           Clear all
         </button>
       </div>
