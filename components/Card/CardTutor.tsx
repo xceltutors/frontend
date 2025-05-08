@@ -56,16 +56,13 @@ export function CardTutor({
               {type}
             </span>
           </div>
-
           <div className="mt-3 mb-2">
             <Link
-              href={"#"}
-              className="flex items-center gap-1 text-[var(--custom-blue-900)]"
+              href={`tutor-profile/${id}`}
+              className="flex items-center gap-1 text-[var(--custom-blue-900)] text-xs sm:text-sm underline"
             >
               <Info className="w-4 h-4" />
-              <Link href={`tutor-profile/${id}`} className="text-xs sm:text-sm underline">
-                See tutor&apos;s profile
-              </Link>
+              See tutor&apos;s profile
             </Link>
           </div>
 

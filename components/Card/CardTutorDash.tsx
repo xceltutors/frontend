@@ -44,12 +44,12 @@ export function CardTutorDash({
           <div className="flex items-center gap-2">
             <h3
               className="font-(family-name:--font-volkhov) text-lg font-bold
-             text-[var(--custom-blue-900)]"
+      text-[var(--custom-blue-900)]"
             >
               {name}
             </h3>
             <span className="text-gray-500">•</span>
-            <span className="font-bold text-[var(--custom-blue-900)]0">
+            <span className="font-bold text-[var(--custom-blue-900)]">
               € {price}
               <span className="text-gray-500 text-sm font-normal">/hr</span>
             </span>
@@ -57,15 +57,10 @@ export function CardTutorDash({
 
           <Link
             href={`tutor-profile/${id}`}
-            className="flex items-center gap-1 text-[var(--custom-blue-900)]"
+            className="flex items-center gap-1 text-[var(--custom-blue-900)] text-xs sm:text-sm underline"
           >
             <Info className="w-4 h-4" />
-            <Link
-              href={`tutor-profile/${id}`}
-              className="text-xs sm:text-sm underline"
-            >
-              See tutor&apos;s profile
-            </Link>
+            See tutor&apos;s profile
           </Link>
         </div>
       </div>
