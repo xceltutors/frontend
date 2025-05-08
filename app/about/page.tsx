@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
+import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 
 export default function About() {
   return (
-    <>
+    <DefaultLayout>
       <section
         className="w-full h-auto mx-auto flex items-center flex-col 
       justify-center text-center space-y-6 pb-[2%]"
@@ -247,6 +248,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </>
+    </DefaultLayout>
   );
 }

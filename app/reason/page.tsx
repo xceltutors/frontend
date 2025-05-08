@@ -4,10 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { InfoOption } from "@/components/InfoOption/InfoOption";
 import { FilePen, Shield, User, UserCheck } from "lucide-react";
+import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 
 export default function Reason() {
   return (
-    <>
+    <DefaultLayout>
       <section className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center space-y-6">
         <h2
           className="w-[85%] md:w-[50%] font-(family-name:--font-volkhov) text-4xl lg:text-[96px] 
@@ -117,6 +118,6 @@ export default function Reason() {
           Start your journey
         </Link>
       </div>
-    </>
+    </DefaultLayout>
   );
 }

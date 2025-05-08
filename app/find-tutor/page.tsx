@@ -3,6 +3,7 @@ import { CardTutor } from "@/components/Card/CardTutor";
 import { tutors } from "./data";
 import FilterSection from "./_components/filter-section";
 import Link from "next/link";
+import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 
 export default async function FindTutorPage({
     searchParams,
@@ -14,10 +15,10 @@ export default async function FindTutorPage({
     const currentPage = page > 0 ? page : 1;
 
     return (
-        <>
+        <DefaultLayout>
             <section
                 className="w-full h-auto mx-auto flex items-center flex-col justify-center text-center
-       py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+                py-4 sm:py-6 md:py-8 lg:py-12 px-10 sm:px-16 md:px-24 lg:px-32 xl:px-40"
             >
                 <h2
                     className="w-[85%] md:w-[50%] lg:w-[48%] xl:w-[40%] font-(family-name:--font-volkhov) text-4xl lg:text-5xl 
@@ -52,7 +53,7 @@ export default async function FindTutorPage({
                         ))}
                         <button
                             className="w-8 h-8 flex items-center cursor-pointer 
-              justify-center transparent text-[var(--custom-blue-700)]"
+                            justify-center transparent text-[var(--custom-blue-700)]"
                         >
                             <Link href={`/findTutor?page=${page}`}>
                                 {page}
@@ -63,6 +64,6 @@ export default async function FindTutorPage({
                     </nav>
                 </div>
             </section>
-        </>
+        </DefaultLayout>
     );
 }

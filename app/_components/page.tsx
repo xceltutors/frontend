@@ -7,10 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { popularSubject } from "@/data/popularSubject";
 import Tutors from "@/components/Tutors/Tutors";
+import { DefaultLayout } from "@/components/layouts/DefaultLayout";
 
 export default function LandingPage() {
   return (
-    <>
+    <DefaultLayout>
       <Hero />
       <section
         className="w-full h-auto lg:h-[33.75rem] flex flex-col md:flex-row gap-8 py-4 sm:py-6
@@ -85,6 +86,6 @@ export default function LandingPage() {
         </div>
       </section>
       <FAQ />
-    </>
+    </DefaultLayout>
   );
 }
