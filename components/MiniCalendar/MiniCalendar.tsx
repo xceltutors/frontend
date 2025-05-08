@@ -1,37 +1,78 @@
+"use client";
+
+import * as React from "react";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { ptBR } from "date-fns/locale";
+import { startOfWeek, endOfWeek, isBefore, isAfter } from "date-fns";
+
 export function MiniCalendar() {
-    return (
-        <div className="mb-6">
-            <div className="mb-2 flex items-center justify-between">
-                <h4 className="font-medium">12 Feb</h4>
-                <div className="flex gap-1">
-                    <button className="rounded p-1 hover:bg-gray-100">
-                        <span className="sr-only">Previous</span>
-                        &lt;
-                    </button>
-                    <button className="rounded p-1 hover:bg-gray-100">
-                        <span className="sr-only">Next</span>
-                        &gt;
-                    </button>
-                </div>
-            </div>
+  const [selectedDate, setSelectedDate] = React.useState<Date | null>(new Date());
 
-            <div className="grid grid-cols-7 gap-1 text-center text-xs">
-                <div className="py-1 font-medium">S</div>
-                <div className="py-1 font-medium">M</div>
-                <div className="py-1 font-medium">T</div>
-                <div className="py-1 font-medium">W</div>
-                <div className="py-1 font-medium">T</div>
-                <div className="py-1 font-medium">F</div>
-                <div className="py-1 font-medium">S</div>
+  const weekStart = selectedDate ? startOfWeek(selectedDate, { weekStartsOn: 0 }) : null;
+  const weekEnd = selectedDate ? endOfWeek(selectedDate, { weekStartsOn: 0 }) : null;
 
-                <div className="rounded py-1">09</div>
-                <div className="rounded py-1">10</div>
-                <div className="rounded py-1">11</div>
-                <div className="rounded py-1">12</div>
-                <div className="rounded py-1">13</div>
-                <div className="rounded bg-orange-500 py-1 text-white">14</div>
-                <div className="rounded py-1">15</div>
-            </div>
-        </div>
-    )
+  const selectedDayIndex = selectedDate ? selectedDate.getDay() : -1;
+
+  return (
+    <div className="mb-6">
+      <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ptBR}>
+        <DateCalendar
+          value={selectedDate}
+          onChange={(newDate) => setSelectedDate(newDate)}
+          sx={{
+            width: "100%",
+            maxHeight: 160,
+            border: "1px solid #323232",
+            borderRadius: "12px",
+            padding: "8px",
+            overflow: "hidden",
+            "& .MuiPickersCalendarHeader-root": {
+              borderBottom: "1px solid #323232",
+              paddingBottom: "4px",
+              marginBottom: "12px"
+            },
+            "& .MuiDayCalendar-weekContainer": {
+              display: "flex",
+              justifyContent: "center",
+              gap: "4px",
+            },
+            "& .MuiPickersDay-root": {
+              display: "none",
+            },
+            "& .MuiPickersDay-root:not(.Mui-disabled)": {
+              display: "inline-flex",
+            },
+            "& .MuiPickersDay-root.Mui-selected": {
+              bgcolor: "#ff5722",
+              color: "white",
+              borderRadius: "6px",
+              "&:hover": {
+                bgcolor: "#e64a19",
+              },
+            },
+            "& .MuiDayCalendar-weekDayLabel": {
+              color: "#555",
+              fontWeight: "normal",
+              borderRadius: "6px",
+              padding: "4px 6px",
+            },
+            [`& .MuiDayCalendar-weekDayLabel:nth-of-type(${selectedDayIndex + 1})`]: {
+              backgroundColor: "#ff5722",
+              color: "white",
+              fontWeight: "bold",
+            },
+          }}
+          shouldDisableDate={(date: Date) => {
+            if (!weekStart || !weekEnd) return true;
+            return isBefore(date, weekStart) || isAfter(date, weekEnd);
+          }}
+          showDaysOutsideCurrentMonth={false}
+          views={["day"]}
+          reduceAnimations
+        />
+      </LocalizationProvider>
+    </div>
+  );
 }
