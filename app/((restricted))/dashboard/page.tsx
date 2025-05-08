@@ -1,7 +1,6 @@
 import { ClassCard } from "@/components/Card/ClassCard";
 import { OutstandingActionCard } from "@/components/Card/OutstandingActionCard";
 import { SubTitle } from "@/components/SubTitle/SubTitle";
-import Link from "next/link";
 
 export default function Dashboard() {
     return (

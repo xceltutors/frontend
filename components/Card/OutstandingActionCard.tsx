@@ -1,4 +1,4 @@
-import { Calendar, GraduationCap, MessageSquare, OctagonAlert, Phone, User } from "lucide-react";
+import { Calendar, GraduationCap, OctagonAlert, Phone } from "lucide-react";
 import Image from "next/image";
 
 interface OutstandingActionCardProps {
