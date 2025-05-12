@@ -6,7 +6,7 @@ import { MoveRight } from "lucide-react";
 
 export default function FindTutor() {
   return (
-    <div className="w-full flex flex-col px-4 mt-3">
+    <section className="w-full flex flex-col px-4 mt-3">
       <div className="mb-8">
         <SubTitle subtitle="Find a tutor" />
         <FilterSection />
@@ -40,6 +40,6 @@ export default function FindTutor() {
           </nav>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -5,7 +5,7 @@ import LessonList from "./_components/LessonList";
 
 export default function History() {
   return (
-    <div className="w-full flex flex-col px-4 mt-3">
+    <section className="w-full flex flex-col px-4 mt-3">
       <div className="mb-8">
         <SubTitle subtitle="Teaching & Learning History" />
 
@@ -38,6 +38,6 @@ export default function History() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

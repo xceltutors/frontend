@@ -39,7 +39,7 @@ export function FAQ() {
                 {faq.question}
               </h3>
               <svg
-                className={`w-6 h-6 transition-transform ${openIndex === index ? "transform rotate-180" : ""
+                className={`w-6 h-6 cursor-pointer transition-transform ${openIndex === index ? "transform rotate-180" : ""
                   }`}
                 fill="none"
                 stroke="currentColor"
