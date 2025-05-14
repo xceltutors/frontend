@@ -10,7 +10,7 @@ import {
 
 export const navItems = [
   { icon: <Home className="h-5 w-5" />, label: "Home", href: "/student" },
-  { icon: <Calendar className="h-5 w-5" />, label: "Calendar", href: "#" },
+  { icon: <Calendar className="h-5 w-5" />, label: "Calendar", href: "/student/calendar" },
   {
     icon: <Clock className="h-5 w-5" />,
     label: "History",
